@@ -1,0 +1,29 @@
+<div class="product-swiper">
+   <div class="product-swiper__thumbs">
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            @@loop('./Product-Slide-Thumb.html','json/product.json')
+            @@loop('./Product-Slide-Thumb.html','json/product.json')
+         </div>
+      </div>
+   </div>
+
+   <div class="product-swiper__main">
+      <button type="button" class="swiper-button product-swiper-prev" aria-label="листать назад">
+         <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.24781 0.5H5.12781L0.507812 6.4L5.14781 12.3H7.24781L3.44781 7.52C3.40781 7.46667 3.36781 7.41333 3.32781 7.36C3.27448 7.30667 3.22781 7.25333 3.18781 7.2H21.3078V5.6H3.18781C3.24115 5.53333 3.29448 5.46667 3.34781 5.4C3.40115 5.33333 3.46115 5.26667 3.52781 5.2L7.24781 0.5Z" fill="white" />
+         </svg>
+      </button>
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            @@loop('./Product-Slide.html','json/product.json')
+            @@loop('./Product-Slide.html','json/product.json')
+         </div>
+      </div>
+      <button type="button" class="swiper-button product-swiper-next" aria-label="листать вперёд">
+         <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.7522 0.5H16.8722L21.4922 6.4L16.8522 12.3H14.7522L18.5522 7.52C18.5922 7.46667 18.6322 7.41333 18.6722 7.36C18.7255 7.30667 18.7722 7.25333 18.8122 7.2H0.692187V5.6H18.8122C18.7589 5.53333 18.7055 5.46667 18.6522 5.4C18.5989 5.33333 18.5389 5.26667 18.4722 5.2L14.7522 0.5Z" fill="white" />
+         </svg>
+      </button>
+   </div>
+</div>

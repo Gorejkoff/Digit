@@ -1,0 +1,18 @@
+<div class="feedback__swiper margin-section">
+   <div class="swiper">
+      <div class="swiper-wrapper">
+         @@loop('../Cards/Feedback-Card/Feedback-Card.html','json/feedback.json')
+         @@loop('../Cards/Feedback-Card/Feedback-Card.html','json/feedback.json')
+         @@loop('../Cards/Feedback-Card/Feedback-Card.html','json/feedback.json')
+         @@loop('../Cards/Feedback-Card/Feedback-Card.html','json/feedback.json')
+      </div>
+   </div>
+   <div class="swiper__nav">
+      <div class="swiper__nav-buttons">
+         <a href="#0" class="button-border">Смотреть все отзывы на Яндексе</a>
+         <a href="#0" class="button-green">Сделать заказ</a>
+      </div>
+      <div class="swiper-pagination"></div>
+      @@include('../Swiper-Buttons/Swiper-Buttons.html',{})
+   </div>
+</div>

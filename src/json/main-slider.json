@@ -1,0 +1,38 @@
+[
+   {
+      "text": "Визитки от 1₽",
+      "image": "jpg/image-2.jpg",
+      "class": "",
+      "link": "product.html"
+   },
+   {
+      "text": "Кружки от 10 шт.",
+      "image": "jpg/image-9.jpg",
+      "class": "",
+      "link": "product.html"
+   },
+   {
+      "text": "Пакеты от 20 шт.",
+      "image": "jpg/image-10.jpg",
+      "class": "",
+      "link": "product.html"
+   },
+   {
+      "text": "Листовки офсетная печать",
+      "image": "jpg/image-1.jpg",
+      "class": "dark",
+      "link": "product.html"
+   },
+   {
+      "text": "Кепки от 10 шт.",
+      "image": "jpg/image-12.jpg",
+      "class": "",
+      "link": "product.html"
+   },
+   {
+      "text": "Шопперы от 10 шт.",
+      "image": "jpg/image-13.jpg",
+      "class": "",
+      "link": "product.html"
+   }
+]

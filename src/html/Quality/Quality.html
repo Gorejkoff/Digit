@@ -1,0 +1,11 @@
+<section class="quality margin-section">
+   <div class="quality__container">
+      @@include('../Title/Title.html',{
+      'text':'Качество и скорость',
+      'caption':'За счет современного оборудования'
+      })
+      <div class="quality__grid">
+         @@loop('./Quality-Card.html','json/quality.json')
+      </div>
+   </div>
+</section>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   @@include('html/1_head.html',{"title":"Index"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      <div class="main">
+
+         @@include('html/Main-Slider/Main-Slider.html',{})
+
+         @@include('html/Banner/Banner.html',{})
+
+         @@include('html/Production/Production.html',{})
+
+         @@include('html/Quality/Quality.html',{})
+
+         @@include('html/Service/Service.html',{})
+
+         @@include('html/Our-Work/Our-Work.html',{})
+
+         @@include('html/Feedback/Feedback.html',{})
+
+         @@include('html/News/News.html',{})
+
+      </div>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+
+   @@include('html/3_scripts.html',{
+   swiper: true,
+   })
+
+
+</body>
+
+</html>

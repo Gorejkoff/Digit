@@ -1,0 +1,16 @@
+.product {
+
+   &__container {}
+
+   &__body {
+      display: flex;
+   }
+
+   &__content {
+      width: 596px;
+   }
+
+   &__calculate {
+      flex: 1 1 auto;
+   }
+}

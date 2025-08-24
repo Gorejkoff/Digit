@@ -1,0 +1,44 @@
+<header id="header" class="header">
+   <div class="header__container">
+      <div class="header__body">
+         <a href="index.html" class="header__logo">
+            <img src="@img/svg/logo.svg" alt="логотип компании Цифра">
+         </a>
+         <div class="header__shell">
+            <address class="header__contacts">
+               <div class="header__phone">
+                  <a href="tel:+79658423241">+7 (965) 842-32-41</a>
+                  <a href="tel:+73412323241">+7 (3412) 32-32-41</a>
+               </div>
+               <a href="mailto:izhcifra@yandex.ru">izhcifra@yandex.ru</a>
+            </address>
+            <div class="header__search">
+               <form action="#" method="post" name="search_form">
+                  <input type="text" name="search">
+               </form>
+               <div class="header__result">
+                  <div class="header__result-list">
+                     @@loop('./Cards/Result-Card/Result-Card.html', 'json/result-search.json')
+                  </div>
+                  <div class="header__baner">
+                     <div class="header__baner-text">Отслеживайте статус заказа</div>
+                     <div>
+                        <a href="#0" class="button-green">Подписаться на ТГ бота</a>
+                     </div>
+                     <img class="header__baner-bg" src="@img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                  </div>
+               </div>
+            </div>
+            <button class="header__search-button js-open-search" type="button" aria-label="открыть поле поиска">
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66665 1.83337C6.9006 1.83337 6.14206 1.98426 5.43433 2.27741C4.72659 2.57056 4.08353 3.00024 3.54186 3.54192C3.00018 4.08359 2.5705 4.72665 2.27735 5.43439C1.9842 6.14212 1.83331 6.90066 1.83331 7.66671C1.83331 8.43275 1.9842 9.1913 2.27735 9.89903C2.5705 10.6068 3.00018 11.2498 3.54186 11.7915C4.08353 12.3332 4.72659 12.7629 5.43433 13.056C6.14206 13.3492 6.9006 13.5 7.66665 13.5C9.21374 13.5 10.6975 12.8855 11.7914 11.7915C12.8854 10.6975 13.5 9.2138 13.5 7.66671C13.5 6.11961 12.8854 4.63588 11.7914 3.54192C10.6975 2.44796 9.21374 1.83337 7.66665 1.83337ZM0.833313 7.66671C0.833313 3.89337 3.89331 0.833374 7.66665 0.833374C11.44 0.833374 14.5 3.89337 14.5 7.66671C14.5 9.37337 13.874 10.9347 12.8393 12.132L15.02 14.3134C15.0691 14.3591 15.1085 14.4143 15.1358 14.4757C15.1632 14.537 15.1779 14.6032 15.179 14.6704C15.1802 14.7375 15.1679 14.8042 15.1427 14.8664C15.1176 14.9287 15.0802 14.9853 15.0327 15.0327C14.9852 15.0802 14.9286 15.1176 14.8664 15.1428C14.8041 15.1679 14.7374 15.1803 14.6703 15.1791C14.6032 15.1779 14.537 15.1632 14.4756 15.1359C14.4143 15.1086 14.3591 15.0692 14.3133 15.02L12.132 12.8394C10.8925 13.9133 9.30665 14.5031 7.66665 14.5C3.89331 14.5 0.833313 11.44 0.833313 7.66671Z" fill="#191919" />
+               </svg>
+            </button>
+         </div>
+         <div>
+            @@include('./Button-Menu/Button-Menu.html',{})
+         </div>
+      </div>
+   </div>
+   @@include('../html/Menu/Menu.html',{})
+</header>

@@ -1,0 +1,15 @@
+<div class="news__swiper">
+   <div class="swiper">
+      <div class="swiper-wrapper">
+         @@loop('../Cards/Common-Card/Common-Card.html','json/news.json')
+      </div>
+   </div>
+
+   <div class="swiper__nav">
+      <div class="swiper__nav-buttons">
+         <a href="#0" class="button-green">Следить за нами в VK.com</a>
+      </div>
+      <div class="swiper-pagination"></div>
+      @@include('../Swiper-Buttons/Swiper-Buttons.html',{})
+   </div>
+</div>

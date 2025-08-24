@@ -1,0 +1,51 @@
+<div class="menu">
+   <div class="menu__container">
+      <div class="menu__body">
+         <div class="menu__block">
+            <nav class="menu__bg">
+               <div class="menu__list-title">Полиграфия_</div>
+               <ol class="menu__list-grid hover-list">
+                  @@loop('./li.html','json/menu-list-1.json')
+               </ol>
+            </nav>
+            <nav class="menu__bg">
+               <div class="menu__list-title">Сувенирная продукция_</div>
+               <ol class="menu__list-grid hover-list">
+                  @@loop('./li.html','json/menu-list-2.json')
+               </ol>
+            </nav>
+         </div>
+
+         <div class="menu__block">
+            <div class="menu__grid">
+               <nav class="menu__bg grid-row-2">
+                  <div class="menu__list-title">Инженерная печать_</div>
+                  <ol class="menu__list-column hover-list">
+                     @@loop('./li.html','json/menu-list-3.json')
+                  </ol>
+               </nav>
+               @@include('../Cards/Link-Card/Link-Card.html',{
+               text:'Реклама',
+               image:'jpg/image-4.jpg'
+               })
+               @@include('../Cards/Link-Card/Link-Card.html',{
+               text:'Стенды',
+               image:'jpg/image-5.jpg'
+               })
+            </div>
+            <div class="menu__grid">
+               @@include('../Cards/Link-Card/Link-Card.html',{
+               text:'Интерьер',
+               image:'jpg/image-6.jpg',
+               class:'grid-row-2'
+               })
+               @@include('../Cards/Link-Card/Link-Card.html',{
+               text:'Мобильные стенды',
+               image:'jpg/image-7.jpg',
+               class:'grid-row-2'
+               })
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

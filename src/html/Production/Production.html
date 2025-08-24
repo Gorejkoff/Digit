@@ -1,0 +1,50 @@
+<section class="production margin-section">
+   <div class="production__container">
+      @@include('../Title/Title.html',{
+      text:"Продукция",
+      caption:"Полиграфия, наружная реклама и сувенирка"
+      })
+
+      <div class="production__grid">
+         <div class="production__group js-production-group">
+            <div class="production__title">Полиграфия_</div>
+            <ol class="production__list hover-list">
+               @@loop('./li.html','json/production-list-1.json')
+            </ol>
+            <ol class="production__list hover-list hidden">
+               @@loop('./li.html','json/production-list-1.json')
+            </ol>
+            <button class="production__list-show js-production-show" type="button">
+               Показать еще 10+ услуг
+            </button>
+         </div>
+         <div class="production__group js-production-group">
+            <div class="production__title">Полиграфия_</div>
+            <ol class="production__list hover-list">
+               @@loop('./li.html','json/production-list-2.json')
+            </ol>
+            <button class="production__list-show js-production-show hidden" type="button">
+               Показать еще 10+ услуг
+            </button>
+         </div>
+         <div class="production__group js-production-group">
+            <div class="production__title">Полиграфия_</div>
+            <ol class="production__list hover-list">
+               @@loop('./li.html','json/production-list-3.json')
+            </ol>
+            <ol class="production__list hover-list hidden">
+               @@loop('./li.html','json/production-list-3.json')
+            </ol>
+            <button class="production__list-show js-production-show" type="button">
+               Показать еще 10+ услуг
+            </button>
+         </div>
+      </div>
+      <div class="production__grid-cards">
+         @@loop('../Cards/Link-Card/Link-Card.html','json/production-grid-cards.json')
+      </div>
+
+
+   </div>
+
+</section>

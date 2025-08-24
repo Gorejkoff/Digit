@@ -1,0 +1,97 @@
+.quality {
+
+   &__container {}
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+   }
+
+   &__card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+   }
+
+   &__swiper {
+      position: relative;
+   }
+
+   &__swiper-image {
+      position: relative;
+      padding-bottom: 160%;
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__pagination {
+      padding: 12px 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      gap: 4px;
+
+      .swiper-pagination-bullet {
+         flex: 1 1 1%;
+         height: 2px;
+         border-radius: 2px;
+         background-color: rgba(255, 255, 255, 0.4);
+
+         &.swiper-pagination-bullet-active {
+            background-color: #ffffff;
+         }
+      }
+   }
+
+   &__card-front {
+      padding: 24px 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(14, 25, 39, 0.4);
+   }
+
+   &__card-front-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__card-front-logo {}
+
+   &__card-front-text {
+      padding: 20px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      color: #fff;
+   }
+
+   &__card-front-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+   }
+}

@@ -1,0 +1,78 @@
+.our-work {
+
+   &__tab-body {
+      display: flex;
+   }
+
+   &__tab-buttons {
+      padding-bottom: 16px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 4px;
+   }
+
+   &__tab-underline {
+      position: relative;
+      padding-bottom: 8px;
+      margin-top: 24px;
+      overflow: hidden;
+   }
+
+   &__tab-button {
+      text-align: left;
+      font-size: 24px;
+      line-height: 108%;
+      letter-spacing: -0.02em;
+      color: rgba(25, 25, 25, 0.6);
+      transition: color 0.3s;
+
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: -8px;
+         left: 0;
+         width: 100vw;
+         height: 1px;
+         border-bottom: 1px solid rgba(25, 25, 25, 0.6);
+         transition: border-color 0.3s;
+      }
+
+      &.active,
+      &:hover {
+         color: #191919;
+
+         &::before {
+            border-color: #191919;
+         }
+      }
+
+   }
+
+   &__tab-view {
+      flex: 0 0 min(50%, 550px);
+   }
+
+   &__tab-image {
+      position: relative;
+      padding-bottom: 63.63%;
+      border-radius: 32px;
+      overflow: hidden;
+      display: none;
+
+      &.active {
+         display: block;
+      }
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}

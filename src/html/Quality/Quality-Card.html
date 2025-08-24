@@ -1,0 +1,37 @@
+<div class="quality__card">
+   <div class="quality__swiper">
+      <div class="swiper">
+         <div class="swiper-wrapper">
+            @@for( var i = 0; i < context.images.length; i++ ){ <div class="swiper-slide">
+               <div class="quality__swiper-image">
+                  <img src="@img/${context.images[i]}" alt="фото продуктов производства">
+               </div>
+         </div>
+         }
+      </div>
+   </div>
+   <div class="quality__pagination"></div>
+</div>
+<div class="quality__card-front">
+   <div class="quality__card-front-header">
+      <div class="quality__card-front-logo">
+         <img src="@img/svg/logo-2.svg" alt="логотип цифра">
+      </div>
+      <button type="button">
+         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2408 0.992288C15.7673 1.51879 15.7673 2.37242 15.2408 2.89892L2.29813 15.8415C1.77163 16.368 0.918004 16.368 0.391503 15.8415C-0.134997 15.315 -0.134997 14.4614 0.391503 13.9349L13.3341 0.992288C13.8606 0.465787 14.7143 0.465787 15.2408 0.992288Z" fill="white" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.391503 0.992288C0.918004 0.465787 1.77163 0.465787 2.29813 0.992288L15.2408 13.9349C15.7673 14.4614 15.7673 15.315 15.2408 15.8415C14.7143 16.368 13.8606 16.368 13.3341 15.8415L0.391503 2.89892C-0.134997 2.37242 -0.134997 1.51879 0.391503 0.992288Z" fill="white" />
+         </svg>
+      </button>
+   </div>
+   <div class="quality__card-front-text">@@text</div>
+   <div class="quality__card-front-button">
+      <span>
+         <svg width="26" height="11" viewBox="0 0 26 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.42505 9.2875L13.5709 2L24.907 9.2875" stroke="white" stroke-width="2.13889" stroke-linecap="round" />
+         </svg>
+      </span>
+      <a href="#0" class="button-white">Смотреть</a>
+   </div>
+</div>
+</div>
