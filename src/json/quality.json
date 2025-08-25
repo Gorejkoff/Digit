@@ -1,31 +1,35 @@
 [
    {
       "text": "Процесс печати пакетов",
+      "image": "jpg/image-18.jpg",
+      "number": "1",
       "images": [
-         "jpg/image-18.jpg",
          "jpg/image-19.jpg",
          "jpg/image-20.jpg"
       ]
    },
    {
       "text": "Процесс печати кубика-трансформера",
+      "image": "jpg/image-19.jpg",
+      "number": "2",
       "images": [
-         "jpg/image-19.jpg",
          "jpg/image-21.jpg"
       ]
    },
    {
       "text": "Процесс печати папки",
+      "image": "jpg/image-20.jpg",
+      "number": "3",
       "images": [
-         "jpg/image-20.jpg",
          "jpg/image-21.jpg",
          "jpg/image-19.jpg"
       ]
    },
    {
       "text": "Процесс печати шильдиков",
+      "image": "jpg/image-21.jpg",
+      "number": "4",
       "images": [
-         "jpg/image-21.jpg",
          "jpg/image-18.jpg"
       ]
    }

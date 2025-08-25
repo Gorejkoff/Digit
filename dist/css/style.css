@@ -1607,7 +1607,7 @@ body {
 
 .quality__swiper-image {
   position: relative;
-  padding-bottom: 160%;
+  padding-bottom: 174.55%;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1722,6 +1722,11 @@ body {
 .quality__visible .quality__card-front-text {
   opacity: 0;
   pointer-events: none;
+}
+
+.fancybox__footer,
+.fancybox__carousel {
+  width: 100vw;
 }
 
 .product__body {

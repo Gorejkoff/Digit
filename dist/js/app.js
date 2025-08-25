@@ -40,7 +40,7 @@ document.documentElement.addEventListener("click", (event) => {
    if (!event.target.closest('.header')) { closeSearch() }
    if (event.target.closest('.js-open-search')) { openSearch() }
    if (event.target.closest('.js-production-show')) { showProductionNextList(event) }
-   if (event.target.closest('.js-show-quality')) { showQuality(event) }
+   // if (event.target.closest('.js-show-quality')) { showQuality(event) }
 })
 
 function openHeaderMenu() {
@@ -73,14 +73,17 @@ function showProductionNextList(event) {
 function removeButtonProductionShow(event) {
    event.target.closest('.js-production-show').classList.add('hidden');
 }
-function showQuality(event) {
-   const tergetElement = event.target.closest('.js-hide-quality')
-   if (!tergetElement) return;
-   tergetElement.classList.add('quality__visible')
-}
+// function showQuality(event) {
+//    const tergetElement = event.target.closest('.js-hide-quality')
+//    if (!tergetElement) return;
+//    tergetElement.classList.add('quality__visible')
+// }
 
 
-
+// Fancybox.bind('[data-fancybox]', {});
+Fancybox.bind("[data-fancybox]", {
+   hideScrollbar: false,
+});
 if (document.querySelector('.main-slider__swiper-thumbs')
    && document.querySelector('.main-slider__swiper')) {
    const swiper2 = new Swiper('.main-slider__swiper', {

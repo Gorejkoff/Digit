@@ -1,0 +1,27 @@
+<div class="quality__card">
+   <div style="display: none;">
+      @@for( var i = 0; i < context.images.length; i++ ){ <a data-fancybox="gallery-@@number" href="@img/${context.images[i]}">
+         <img src="@img/${context.images[i]}" alt="фото продуктов производства">
+         </a>
+         }
+   </div>
+   <div class="quality__swiper-image">
+      <img src="@img/@@image" alt="фото продуктов производства">
+   </div>
+   <div class="quality__card-front js-hide-quality">
+      <div class="quality__card-front-header">
+         <div>
+            <img src="@img/svg/logo-2.svg" alt="логотип цифра">
+         </div>
+      </div>
+      <div class="quality__card-front-text">@@text</div>
+      <div class="quality__card-front-button">
+         <span>
+            <svg width="26" height="11" viewBox="0 0 26 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M1.42505 9.2875L13.5709 2L24.907 9.2875" stroke="white" stroke-width="2.13889" stroke-linecap="round" />
+            </svg>
+         </span>
+         <a data-fancybox="gallery-@@number" href="@img/@@image" class="button-white js-show-quality">Смотреть</a>
+      </div>
+   </div>
+</div>
