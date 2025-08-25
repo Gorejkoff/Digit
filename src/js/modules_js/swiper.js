@@ -4,12 +4,26 @@ if (document.querySelector('.main-slider__swiper-thumbs')
       loop: true,
       spaceBetween: 8,
       speed: 300,
-      slidesPerView: 6,
+      slidesPerView: 2,
       // grabCursor: true,
       pagination: {
          el: '.main-slider__pagination',
          type: 'bullets',
          clickable: true,
+      },
+      breakpoints: {
+         1024: {
+            slidesPerView: 6
+         },
+         768: {
+            slidesPerView: 5
+         },
+         550: {
+            slidesPerView: 4
+         },
+         400: {
+            slidesPerView: 3
+         }
       },
    });
    const swiper = new Swiper('.main-slider__swiper-thumbs', {
@@ -23,6 +37,7 @@ if (document.querySelector('.main-slider__swiper-thumbs')
       },
    });
 }
+
 if (document.querySelector('.product-swiper__thumbs')
    && document.querySelector('.product-swiper__main')) {
    const target2 = document.querySelector('.product-swiper__main');
@@ -51,14 +66,13 @@ if (document.querySelector('.product-swiper__thumbs')
    });
 }
 
-
 function addSwiperSection(selector) {
    if (document.querySelector(selector)) {
       const target = document.querySelector(selector);
       const swiper = new Swiper(target.querySelector('.swiper'), {
          spaceBetween: 8,
          speed: 300,
-         slidesPerView: 4,
+         slidesPerView: 1.2,
          grabCursor: true,
          navigation: {
             nextEl: target.querySelector('.swiper-next'),
@@ -68,6 +82,14 @@ function addSwiperSection(selector) {
             el: target.querySelector('.swiper-pagination'),
             type: 'bullets',
             clickable: true,
+         },
+         breakpoints: {
+            1024: {
+               slidesPerView: 4
+            },
+            768: {
+               slidesPerView: 3
+            }
          },
       });
    }

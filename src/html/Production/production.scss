@@ -2,8 +2,12 @@
    &__grid {
       margin-bottom: 8px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       gap: 8px;
+
+      @media (min-width:1024px) {
+         grid-template-columns: repeat(3, 1fr);
+      }
    }
 
    &__group {
@@ -24,10 +28,14 @@
       a {
          margin-top: 4px;
          font-weight: 500;
-         font-size: 20px;
+         font-size: 16px;
          line-height: 120%;
          letter-spacing: -0.02em;
          color: #191919;
+
+         @media (min-width:768px) {
+            font-size: 20px;
+         }
       }
    }
 
@@ -51,8 +59,16 @@
 
    &__grid-cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 8px;
+
+      @media (min-width:768px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width:1200px) {
+         grid-template-columns: repeat(4, 1fr);
+      }
    }
 
 }

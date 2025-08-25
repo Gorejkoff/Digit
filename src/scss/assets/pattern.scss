@@ -46,13 +46,21 @@ body {
 
 .button-border,
 .button-green {
-   display: block;
-   padding: 25px 20px 23px;
-   min-height: 64px;
-   font-size: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 17px 20px 15px;
+   min-height: 40px;
+   font-size: 16px;
    letter-spacing: -0.04em;
    text-align: center;
    border-radius: 32px;
+
+   @media (min-width:768px) {
+      min-height: 64px;
+      padding: 25px 20px 23px;
+      font-size: 20px;
+   }
 }
 
 .button-green {
@@ -77,6 +85,8 @@ body {
    border-radius: 18px;
    min-height: 36px;
    background-color: #fff;
+
+   @media (min-width:768px) {}
 }
 
 .grid-row-2 {
@@ -211,18 +221,34 @@ body {
    &__nav {
       margin-top: 8px;
       display: flex;
+      flex-direction: column;
       gap: 8px;
+
+      @media (min-width:1024px) {
+         flex-direction: row;
+      }
    }
 
    &__nav-buttons {
       flex: 1 1 auto;
       display: flex;
       gap: 8px;
+      flex-direction: column;
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
 
       .button-green {
          flex: 1 1 auto;
          height: 100%;
       }
+   }
+
+   &__nav-pagination {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
    }
 }
 
@@ -230,6 +256,7 @@ body {
    padding: 28px 24px;
    display: flex;
    align-items: center;
+   flex-wrap: wrap;
    gap: 8px;
    background: #f5f5f9;
    border-radius: 32px;

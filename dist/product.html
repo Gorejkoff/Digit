@@ -5,9 +5,8 @@
    <title>"Product"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<meta name="description" content="Описание сайта">
-<!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Raleway-Regular.woff2" crossorigin=""> -->
-<link rel="stylesheet" href="css/style.css?_v=20250825010019">
+<meta name="description" content="Печать рекламной продукции">
+<link rel="stylesheet" href="css/style.css?_v=20250825141636">
 </head>
 
 
@@ -34,8 +33,9 @@
                   <input type="text" name="search">
                </form>
                <div class="header__result">
-                  <div class="header__result-list">
-                     <a href="#0" class="result-card">
+                  <div class="header__result-shell">
+                     <div class="header__result-list">
+                        <a href="#0" class="result-card">
    <div class="result-card__content">
       <div class="result-card__text">Цифровая печать визиток</div>
       <div>
@@ -96,13 +96,14 @@
       </div>
    </div>
 </a>
-                  </div>
-                  <div class="header__baner">
-                     <div class="header__baner-text">Отслеживайте статус заказа</div>
-                     <div>
-                        <a href="#0" class="button-green">Подписаться на ТГ бота</a>
                      </div>
-                     <img class="header__baner-bg" src="./img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                     <div class="header__baner">
+                        <div class="header__baner-text">Отслеживайте статус заказа</div>
+                        <div>
+                           <a href="#0" class="button-green">Подписаться на ТГ бота</a>
+                        </div>
+                        <img class="header__baner-bg" src="./img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                     </div>
                   </div>
                </div>
             </div>
@@ -112,13 +113,11 @@
                </svg>
             </button>
          </div>
-         <div>
-            <button class="open-menu js-open-menu" type="button" aria-label="открыть меню">
+         <button class="open-menu js-open-menu" type="button" aria-label="открыть меню">
    <span class="line line-top"></span>
    <span class="line line-center"></span>
    <span class="line line-bottom"></span>
 </button>
-         </div>
       </div>
    </div>
    <div class="menu">
@@ -134,11 +133,10 @@
             <nav class="menu__bg">
                <div class="menu__list-title">Сувенирная продукция_</div>
                <ol class="menu__list-grid hover-list">
-                  <li><a href="#0">Печать на ручках</a></li><li><a href="#0">Печать на крафт ручках</a></li><li><a href="#0">Печать на карандашах</a></li><li><a href="#0">Чехлы для ручек</a></li><li><a href="#0">Кружки, термокружки,термостаты</a></li><li><a href="#0">Футболки</a></li><li><a href="#0">Ежедневники</a></li><li><a href="#0">Значки закатные</a></li><li><a href="#0">Корпоративные подарки</a></li><li><a href="#0">Печать на usb-устройствах</a></li><li><a href="#0">Магниты акриловые</a></li><li><a href="#0">Печать на пазлах</a></li><li><a href="#0">Магниты виниловые</a></li><li><a href="#0">Сувенирные часы на заказ</a></li><li><a href="#0">Кубик трансформер</a></li><li><a href="#0">Шоколад</a></li><li><a href="#0">Бейсболки, кепки</a></li><li><a href="#0">Браслеты силиконовые</a></li><li><a href="#0">Брелоки акриловые</a></li><li><a href="#0">Медали, кубки</a></li><li><a href="#0">Печать на чехлах для телефонов</a></li><li><a href="#0">Плакетки</a></li><li><a href="#0">Попсокеты</a></li><li><a href="#0">Сумка-шоппер</a></li><li><a href="#0">Трек на стекле</a></li>
+                  <li><a href="#0">Печать на ручках</a></li><li><a href="#0">Печать на крафт ручках</a></li><li><a href="#0">Печать на карандашах</a></li><li><a href="#0">Чехлы для ручек</a></li><li><a href="#0">Кружки, термокружки, термостаты</a></li><li><a href="#0">Футболки</a></li><li><a href="#0">Ежедневники</a></li><li><a href="#0">Значки закатные</a></li><li><a href="#0">Корпоративные подарки</a></li><li><a href="#0">Печать на usb-устройствах</a></li><li><a href="#0">Магниты акриловые</a></li><li><a href="#0">Печать на пазлах</a></li><li><a href="#0">Магниты виниловые</a></li><li><a href="#0">Сувенирные часы на заказ</a></li><li><a href="#0">Кубик трансформер</a></li><li><a href="#0">Шоколад</a></li><li><a href="#0">Бейсболки, кепки</a></li><li><a href="#0">Браслеты силиконовые</a></li><li><a href="#0">Брелоки акриловые</a></li><li><a href="#0">Медали, кубки</a></li><li><a href="#0">Печать на чехлах для телефонов</a></li><li><a href="#0">Плакетки</a></li><li><a href="#0">Попсокеты</a></li><li><a href="#0">Сумка-шоппер</a></li><li><a href="#0">Трек на стекле</a></li>
                </ol>
             </nav>
          </div>
-
          <div class="menu__block">
             <div class="menu__grid">
                <nav class="menu__bg grid-row-2">
@@ -473,9 +471,9 @@
 
 
    
-<script defer src='./js/swiper.js?_v=20250825010019'></script>
+<script defer src='./js/swiper.js?_v=20250825141636'></script>
 
-<script defer src='./js/app.js?_v=20250825010019'></script>
+<script defer src='./js/app.js?_v=20250825141636'></script>
 
 
 </body>

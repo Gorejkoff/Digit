@@ -7,9 +7,15 @@
    &__body {
       padding: 40px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-radius: 32px;
+      gap: 20px;
+      grid-template-columns: 1fr;
+      border-radius: 24px;
       background: #f1f0f5;
+
+      @media (min-width:1024px) {
+         border-radius: 32px;
+         grid-template-columns: 1fr 1fr;
+      }
    }
 
    &__shell {}
@@ -29,15 +35,35 @@
 
    &__grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 24px;
+      justify-items: center;
+      text-align: center;
+
+      @media (min-width:768px) {
+         justify-items: stretch;
+         text-align: left;
+         grid-template-columns: 1fr 1fr;
+      }
    }
 
    &__sub-grid {
       margin-bottom: 48px;
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      justify-items: center;
+      text-align: center;
+
+      @media (min-width:768px) {
+         justify-items: stretch;
+         text-align: left;
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width:1024px) {
+         grid-template-columns: 1.4fr 1fr;
+      }
    }
 
    &__email,
@@ -49,21 +75,25 @@
 
    &__phones {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       font-style: normal;
+      gap: 12px;
 
       a {
          white-space: nowrap;
       }
 
-      a:not(:last-child):after {
-         content: "|";
-         color: #d3d3de;
-         padding: 0 12px;
+      @media (min-width:$max-width-container) {
+         flex-direction: row;
+
+         a:not(:last-child):after {
+            content: "|";
+            color: #d3d3de;
+            padding-left: 12px;
+         }
       }
    }
-
-   &__email {}
 
    &__address {
       font-size: 14px;
@@ -71,12 +101,15 @@
       line-height: 130%;
 
       p {
-         max-width: 200px;
+         @media (min-width:768px) {
+            max-width: 200px;
+         }
       }
 
       &>*:not(:last-child) {
          margin-bottom: 16px;
       }
+
    }
 
    &__info {
@@ -84,7 +117,12 @@
       padding-bottom: 40px;
       font-weight: 300;
       font-size: 14px;
+      text-align: center;
       line-height: 114%;
       color: rgba(25, 25, 25, 0.7);
+
+      @media (min-width:768px) {
+         text-align: left;
+      }
    }
 }

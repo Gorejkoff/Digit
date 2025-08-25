@@ -9,21 +9,26 @@
 
    &__card-thumbs {
       margin-bottom: 8px;
-      padding: 40px;
+      padding: 20px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-start;
       gap: 24px;
-      min-height: 480px;
-      border-radius: 32px;
+      min-height: min(480px, 60vw);
+      border-radius: 20px;
       overflow: hidden;
 
       &.dark {
          .main-slider__card-thumbs-text {
             color: #ffffff;
          }
+      }
+
+      @media (min-width:768px) {
+         padding: 40px;
+         border-radius: 32px;
       }
    }
 
@@ -36,10 +41,18 @@
    &__card-thumbs-text {
       max-width: 700px;
       font-weight: 700;
-      font-size: 80px;
+      font-size: 40px;
       line-height: 90%;
       letter-spacing: -0.06em;
       color: #191919;
+
+      @media (min-width:768px) {
+         font-size: 60px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 80px;
+      }
    }
 
    &__card-thumbs-image {
@@ -65,7 +78,6 @@
          height: 4px;
 
          &.swiper-pagination-bullet-active {
-
             background-color: #5ebf1b;
          }
       }
@@ -74,13 +86,17 @@
    &__card {
       position: relative;
       padding-bottom: 69%;
-      border-radius: 24px;
+      border-radius: 16px;
       overflow: hidden;
 
       &.dark {
          .main-slider__card-text {
             color: #ffffff;
          }
+      }
+
+      @media (min-width:768px) {
+         border-radius: 24px;
       }
    }
 
@@ -91,10 +107,14 @@
       left: 0;
       width: 100%;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 12px;
       line-height: 112%;
       letter-spacing: -0.02em;
       color: #191919;
+
+      @media (min-width:768px) {
+         font-size: 16px;
+      }
    }
 
    &__card-image {

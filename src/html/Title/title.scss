@@ -4,18 +4,30 @@
    &__text {
       padding-bottom: 24px;
       font-weight: 700;
-      font-size: 48px;
+      font-size: 32px;
       line-height: 100%;
       letter-spacing: -0.06em;
       color: #191919;
       border-bottom: 2px solid #191919;
+
+      @media (min-width:768px) {
+         font-size: 40px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 48px;
+      }
    }
 
    &__caption {
       padding-top: 12px;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 12px;
       line-height: 150%;
       color: #191919;
+   }
+
+   @media (min-width:768px) {
+      font-size: 16px;
    }
 }

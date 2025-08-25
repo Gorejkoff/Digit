@@ -6,7 +6,11 @@
    background-color: #5ebf1b;
    border-radius: 50%;
 
-   @media (min-width:1024px) {}
+   .search-is-open & {
+      @media (max-width:1199.98px) {
+         display: none;
+      }
+   }
 }
 
 .line {

@@ -14,10 +14,14 @@
    &__text {
       padding: 16px;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 12px;
       line-height: 112%;
       letter-spacing: -0.02em;
       color: #191919;
+
+      @media (min-width:768px) {
+         font-size: 16px;
+      }
    }
 
    &__price {

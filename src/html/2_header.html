@@ -17,15 +17,17 @@
                   <input type="text" name="search">
                </form>
                <div class="header__result">
-                  <div class="header__result-list">
-                     @@loop('./Cards/Result-Card/Result-Card.html', 'json/result-search.json')
-                  </div>
-                  <div class="header__baner">
-                     <div class="header__baner-text">Отслеживайте статус заказа</div>
-                     <div>
-                        <a href="#0" class="button-green">Подписаться на ТГ бота</a>
+                  <div class="header__result-shell">
+                     <div class="header__result-list">
+                        @@loop('./Cards/Result-Card/Result-Card.html', 'json/result-search.json')
                      </div>
-                     <img class="header__baner-bg" src="@img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                     <div class="header__baner">
+                        <div class="header__baner-text">Отслеживайте статус заказа</div>
+                        <div>
+                           <a href="#0" class="button-green">Подписаться на ТГ бота</a>
+                        </div>
+                        <img class="header__baner-bg" src="@img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                     </div>
                   </div>
                </div>
             </div>
@@ -35,9 +37,7 @@
                </svg>
             </button>
          </div>
-         <div>
-            @@include('./Button-Menu/Button-Menu.html',{})
-         </div>
+         @@include('./Button-Menu/Button-Menu.html',{})
       </div>
    </div>
    @@include('../html/Menu/Menu.html',{})

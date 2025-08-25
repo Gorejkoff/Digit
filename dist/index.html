@@ -5,9 +5,8 @@
    <title>"Index"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<meta name="description" content="Описание сайта">
-<!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Raleway-Regular.woff2" crossorigin=""> -->
-<link rel="stylesheet" href="css/style.css?_v=20250825010019">
+<meta name="description" content="Печать рекламной продукции">
+<link rel="stylesheet" href="css/style.css?_v=20250825141636">
 </head>
 
 
@@ -34,8 +33,9 @@
                   <input type="text" name="search">
                </form>
                <div class="header__result">
-                  <div class="header__result-list">
-                     <a href="#0" class="result-card">
+                  <div class="header__result-shell">
+                     <div class="header__result-list">
+                        <a href="#0" class="result-card">
    <div class="result-card__content">
       <div class="result-card__text">Цифровая печать визиток</div>
       <div>
@@ -96,13 +96,14 @@
       </div>
    </div>
 </a>
-                  </div>
-                  <div class="header__baner">
-                     <div class="header__baner-text">Отслеживайте статус заказа</div>
-                     <div>
-                        <a href="#0" class="button-green">Подписаться на ТГ бота</a>
                      </div>
-                     <img class="header__baner-bg" src="./img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                     <div class="header__baner">
+                        <div class="header__baner-text">Отслеживайте статус заказа</div>
+                        <div>
+                           <a href="#0" class="button-green">Подписаться на ТГ бота</a>
+                        </div>
+                        <img class="header__baner-bg" src="./img/jpg/image-3.jpg" alt="фон банера" aria-hidden="true">
+                     </div>
                   </div>
                </div>
             </div>
@@ -112,13 +113,11 @@
                </svg>
             </button>
          </div>
-         <div>
-            <button class="open-menu js-open-menu" type="button" aria-label="открыть меню">
+         <button class="open-menu js-open-menu" type="button" aria-label="открыть меню">
    <span class="line line-top"></span>
    <span class="line line-center"></span>
    <span class="line line-bottom"></span>
 </button>
-         </div>
       </div>
    </div>
    <div class="menu">
@@ -134,11 +133,10 @@
             <nav class="menu__bg">
                <div class="menu__list-title">Сувенирная продукция_</div>
                <ol class="menu__list-grid hover-list">
-                  <li><a href="#0">Печать на ручках</a></li><li><a href="#0">Печать на крафт ручках</a></li><li><a href="#0">Печать на карандашах</a></li><li><a href="#0">Чехлы для ручек</a></li><li><a href="#0">Кружки, термокружки,термостаты</a></li><li><a href="#0">Футболки</a></li><li><a href="#0">Ежедневники</a></li><li><a href="#0">Значки закатные</a></li><li><a href="#0">Корпоративные подарки</a></li><li><a href="#0">Печать на usb-устройствах</a></li><li><a href="#0">Магниты акриловые</a></li><li><a href="#0">Печать на пазлах</a></li><li><a href="#0">Магниты виниловые</a></li><li><a href="#0">Сувенирные часы на заказ</a></li><li><a href="#0">Кубик трансформер</a></li><li><a href="#0">Шоколад</a></li><li><a href="#0">Бейсболки, кепки</a></li><li><a href="#0">Браслеты силиконовые</a></li><li><a href="#0">Брелоки акриловые</a></li><li><a href="#0">Медали, кубки</a></li><li><a href="#0">Печать на чехлах для телефонов</a></li><li><a href="#0">Плакетки</a></li><li><a href="#0">Попсокеты</a></li><li><a href="#0">Сумка-шоппер</a></li><li><a href="#0">Трек на стекле</a></li>
+                  <li><a href="#0">Печать на ручках</a></li><li><a href="#0">Печать на крафт ручках</a></li><li><a href="#0">Печать на карандашах</a></li><li><a href="#0">Чехлы для ручек</a></li><li><a href="#0">Кружки, термокружки, термостаты</a></li><li><a href="#0">Футболки</a></li><li><a href="#0">Ежедневники</a></li><li><a href="#0">Значки закатные</a></li><li><a href="#0">Корпоративные подарки</a></li><li><a href="#0">Печать на usb-устройствах</a></li><li><a href="#0">Магниты акриловые</a></li><li><a href="#0">Печать на пазлах</a></li><li><a href="#0">Магниты виниловые</a></li><li><a href="#0">Сувенирные часы на заказ</a></li><li><a href="#0">Кубик трансформер</a></li><li><a href="#0">Шоколад</a></li><li><a href="#0">Бейсболки, кепки</a></li><li><a href="#0">Браслеты силиконовые</a></li><li><a href="#0">Брелоки акриловые</a></li><li><a href="#0">Медали, кубки</a></li><li><a href="#0">Печать на чехлах для телефонов</a></li><li><a href="#0">Плакетки</a></li><li><a href="#0">Попсокеты</a></li><li><a href="#0">Сумка-шоппер</a></li><li><a href="#0">Трек на стекле</a></li>
                </ol>
             </nav>
          </div>
-
          <div class="menu__block">
             <div class="menu__grid">
                <nav class="menu__bg grid-row-2">
@@ -473,17 +471,11 @@
    </div>
    <div class="quality__pagination"></div>
 </div>
-<div class="quality__card-front">
+<div class="quality__card-front js-hide-quality">
    <div class="quality__card-front-header">
-      <div class="quality__card-front-logo">
+      <div>
          <img src="./img/svg/logo-2.svg" alt="логотип цифра">
       </div>
-      <button type="button">
-         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2408 0.992288C15.7673 1.51879 15.7673 2.37242 15.2408 2.89892L2.29813 15.8415C1.77163 16.368 0.918004 16.368 0.391503 15.8415C-0.134997 15.315 -0.134997 14.4614 0.391503 13.9349L13.3341 0.992288C13.8606 0.465787 14.7143 0.465787 15.2408 0.992288Z" fill="white" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.391503 0.992288C0.918004 0.465787 1.77163 0.465787 2.29813 0.992288L15.2408 13.9349C15.7673 14.4614 15.7673 15.315 15.2408 15.8415C14.7143 16.368 13.8606 16.368 13.3341 15.8415L0.391503 2.89892C-0.134997 2.37242 -0.134997 1.51879 0.391503 0.992288Z" fill="white" />
-         </svg>
-      </button>
    </div>
    <div class="quality__card-front-text">Процесс печати пакетов</div>
    <div class="quality__card-front-button">
@@ -492,7 +484,7 @@
             <path d="M1.42505 9.2875L13.5709 2L24.907 9.2875" stroke="white" stroke-width="2.13889" stroke-linecap="round" />
          </svg>
       </span>
-      <a href="#0" class="button-white">Смотреть</a>
+      <button type="button" class="button-white js-show-quality">Смотреть</button>
    </div>
 </div>
 </div><div class="quality__card">
@@ -514,17 +506,11 @@
    </div>
    <div class="quality__pagination"></div>
 </div>
-<div class="quality__card-front">
+<div class="quality__card-front js-hide-quality">
    <div class="quality__card-front-header">
-      <div class="quality__card-front-logo">
+      <div>
          <img src="./img/svg/logo-2.svg" alt="логотип цифра">
       </div>
-      <button type="button">
-         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2408 0.992288C15.7673 1.51879 15.7673 2.37242 15.2408 2.89892L2.29813 15.8415C1.77163 16.368 0.918004 16.368 0.391503 15.8415C-0.134997 15.315 -0.134997 14.4614 0.391503 13.9349L13.3341 0.992288C13.8606 0.465787 14.7143 0.465787 15.2408 0.992288Z" fill="white" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.391503 0.992288C0.918004 0.465787 1.77163 0.465787 2.29813 0.992288L15.2408 13.9349C15.7673 14.4614 15.7673 15.315 15.2408 15.8415C14.7143 16.368 13.8606 16.368 13.3341 15.8415L0.391503 2.89892C-0.134997 2.37242 -0.134997 1.51879 0.391503 0.992288Z" fill="white" />
-         </svg>
-      </button>
    </div>
    <div class="quality__card-front-text">Процесс печати кубика-трансформера</div>
    <div class="quality__card-front-button">
@@ -533,7 +519,7 @@
             <path d="M1.42505 9.2875L13.5709 2L24.907 9.2875" stroke="white" stroke-width="2.13889" stroke-linecap="round" />
          </svg>
       </span>
-      <a href="#0" class="button-white">Смотреть</a>
+      <button type="button" class="button-white js-show-quality">Смотреть</button>
    </div>
 </div>
 </div><div class="quality__card">
@@ -560,17 +546,11 @@
    </div>
    <div class="quality__pagination"></div>
 </div>
-<div class="quality__card-front">
+<div class="quality__card-front js-hide-quality">
    <div class="quality__card-front-header">
-      <div class="quality__card-front-logo">
+      <div>
          <img src="./img/svg/logo-2.svg" alt="логотип цифра">
       </div>
-      <button type="button">
-         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2408 0.992288C15.7673 1.51879 15.7673 2.37242 15.2408 2.89892L2.29813 15.8415C1.77163 16.368 0.918004 16.368 0.391503 15.8415C-0.134997 15.315 -0.134997 14.4614 0.391503 13.9349L13.3341 0.992288C13.8606 0.465787 14.7143 0.465787 15.2408 0.992288Z" fill="white" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.391503 0.992288C0.918004 0.465787 1.77163 0.465787 2.29813 0.992288L15.2408 13.9349C15.7673 14.4614 15.7673 15.315 15.2408 15.8415C14.7143 16.368 13.8606 16.368 13.3341 15.8415L0.391503 2.89892C-0.134997 2.37242 -0.134997 1.51879 0.391503 0.992288Z" fill="white" />
-         </svg>
-      </button>
    </div>
    <div class="quality__card-front-text">Процесс печати папки</div>
    <div class="quality__card-front-button">
@@ -579,7 +559,7 @@
             <path d="M1.42505 9.2875L13.5709 2L24.907 9.2875" stroke="white" stroke-width="2.13889" stroke-linecap="round" />
          </svg>
       </span>
-      <a href="#0" class="button-white">Смотреть</a>
+      <button type="button" class="button-white js-show-quality">Смотреть</button>
    </div>
 </div>
 </div><div class="quality__card">
@@ -601,17 +581,11 @@
    </div>
    <div class="quality__pagination"></div>
 </div>
-<div class="quality__card-front">
+<div class="quality__card-front js-hide-quality">
    <div class="quality__card-front-header">
-      <div class="quality__card-front-logo">
+      <div>
          <img src="./img/svg/logo-2.svg" alt="логотип цифра">
       </div>
-      <button type="button">
-         <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2408 0.992288C15.7673 1.51879 15.7673 2.37242 15.2408 2.89892L2.29813 15.8415C1.77163 16.368 0.918004 16.368 0.391503 15.8415C-0.134997 15.315 -0.134997 14.4614 0.391503 13.9349L13.3341 0.992288C13.8606 0.465787 14.7143 0.465787 15.2408 0.992288Z" fill="white" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.391503 0.992288C0.918004 0.465787 1.77163 0.465787 2.29813 0.992288L15.2408 13.9349C15.7673 14.4614 15.7673 15.315 15.2408 15.8415C14.7143 16.368 13.8606 16.368 13.3341 15.8415L0.391503 2.89892C-0.134997 2.37242 -0.134997 1.51879 0.391503 0.992288Z" fill="white" />
-         </svg>
-      </button>
    </div>
    <div class="quality__card-front-text">Процесс печати шильдиков</div>
    <div class="quality__card-front-button">
@@ -620,7 +594,7 @@
             <path d="M1.42505 9.2875L13.5709 2L24.907 9.2875" stroke="white" stroke-width="2.13889" stroke-linecap="round" />
          </svg>
       </span>
-      <a href="#0" class="button-white">Смотреть</a>
+      <button type="button" class="button-white js-show-quality">Смотреть</button>
    </div>
 </div>
 </div>
@@ -666,6 +640,16 @@
                </div>
             </div>
          </div>
+         <div class="service__cell order-6">
+            <div class="service__text">
+               <span>Грамотная консультация</span>
+            </div>
+            <div>
+               <div class="service__icon">
+                  <img src="./img/svg/icon-4.svg" alt="иконка">
+               </div>
+            </div>
+         </div>
          <div class="service__cell service__cell-rows-2">
             <div class="service__text">
                <span>Вы можете сделать заказ через бота</span>
@@ -683,16 +667,8 @@
                <a href="#0" class="button-green">Узнать статус заказа</a>
             </div>
          </div>
-         <div class="service__cell">
-            <div class="service__text">
-               <span>Грамотная консультация</span>
-            </div>
-            <div>
-               <div class="service__icon">
-                  <img src="./img/svg/icon-4.svg" alt="иконка">
-               </div>
-            </div>
-         </div>
+
+
 
 
 
@@ -847,8 +823,9 @@
          <a href="#0" class="button-border">Смотреть все отзывы на Яндексе</a>
          <a href="#0" class="button-green">Сделать заказ</a>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-buttons">
+      <div class="swiper__nav-pagination">
+         <div class="swiper-pagination"></div>
+         <div class="swiper-buttons">
    <button type="button" class="swiper-button swiper-prev" aria-label="листать назад">
       <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M7.24781 0.5H5.12781L0.507812 6.4L5.14781 12.3H7.24781L3.44781 7.52C3.40781 7.46667 3.36781 7.41333 3.32781 7.36C3.27448 7.30667 3.22781 7.25333 3.18781 7.2H21.3078V5.6H3.18781C3.24115 5.53333 3.29448 5.46667 3.34781 5.4C3.40115 5.33333 3.46115 5.26667 3.52781 5.2L7.24781 0.5Z" fill="white" />
@@ -860,6 +837,7 @@
       </svg>
    </button>
 </div>
+      </div>
    </div>
 </div>
    </div>
@@ -970,8 +948,9 @@
       <div class="swiper__nav-buttons">
          <a href="#0" class="button-green">Следить за нами в VK.com</a>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-buttons">
+      <div class="swiper__nav-pagination">
+         <div class="swiper-pagination"></div>
+         <div class="swiper-buttons">
    <button type="button" class="swiper-button swiper-prev" aria-label="листать назад">
       <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M7.24781 0.5H5.12781L0.507812 6.4L5.14781 12.3H7.24781L3.44781 7.52C3.40781 7.46667 3.36781 7.41333 3.32781 7.36C3.27448 7.30667 3.22781 7.25333 3.18781 7.2H21.3078V5.6H3.18781C3.24115 5.53333 3.29448 5.46667 3.34781 5.4C3.40115 5.33333 3.46115 5.26667 3.52781 5.2L7.24781 0.5Z" fill="white" />
@@ -983,6 +962,7 @@
       </svg>
    </button>
 </div>
+      </div>
    </div>
 </div>
    </div>
@@ -1046,9 +1026,9 @@
 
 
    
-<script defer src='./js/swiper.js?_v=20250825010019'></script>
+<script defer src='./js/swiper.js?_v=20250825141636'></script>
 
-<script defer src='./js/app.js?_v=20250825010019'></script>
+<script defer src='./js/app.js?_v=20250825141636'></script>
 
 
 </body>

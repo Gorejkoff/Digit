@@ -21,21 +21,7 @@ const MIN1024 = window.matchMedia('(min-width: 1024px)');
 const MIN768 = window.matchMedia('(min-width: 768px)');
 
 // variables
-const HEADER = document.getElementById('header');
-
-
-
-function throttle(callee, timeout) {
-   let timer = null;
-   return function perform(...args) {
-      if (timer) return;
-      timer = setTimeout(() => {
-         callee(...args);
-         clearTimeout(timer);
-         timer = null;
-      }, timeout)
-   }
-}
+// const HEADER = document.getElementById('header');
 
 
 
@@ -48,28 +34,25 @@ function throttle(callee, timeout) {
 // addHeightVariable();
 
 
-// ** ======================= RESIZE ======================  ** //
-window.addEventListener('resize', () => {
-   //  addHeightVariable();
-   closeHeaderMenu();
-})
-
-
 // ** ======================= CLICK ======================  ** //
 document.documentElement.addEventListener("click", (event) => {
    if (event.target.closest('.js-open-menu')) { openHeaderMenu() }
+   if (!event.target.closest('.header')) { closeSearch() }
    if (event.target.closest('.js-open-search')) { openSearch() }
    if (event.target.closest('.js-production-show')) { showProductionNextList(event) }
+   if (event.target.closest('.js-show-quality')) { showQuality(event) }
 })
 
 function openHeaderMenu() {
-   document.body.classList.toggle('menu-is-open')
+   document.body.classList.toggle('menu-is-open');
+   closeSearch();
 }
 function closeHeaderMenu() {
    document.body.classList.remove('menu-is-open')
 }
 function openSearch() {
-   document.body.classList.toggle('search-is-open')
+   document.body.classList.toggle('search-is-open');
+   closeHeaderMenu();
 }
 function closeSearch() {
    document.body.classList.remove('search-is-open')
@@ -90,18 +73,40 @@ function showProductionNextList(event) {
 function removeButtonProductionShow(event) {
    event.target.closest('.js-production-show').classList.add('hidden');
 }
+function showQuality(event) {
+   const tergetElement = event.target.closest('.js-hide-quality')
+   if (!tergetElement) return;
+   tergetElement.classList.add('quality__visible')
+}
+
+
+
 if (document.querySelector('.main-slider__swiper-thumbs')
    && document.querySelector('.main-slider__swiper')) {
    const swiper2 = new Swiper('.main-slider__swiper', {
       loop: true,
       spaceBetween: 8,
       speed: 300,
-      slidesPerView: 6,
+      slidesPerView: 2,
       // grabCursor: true,
       pagination: {
          el: '.main-slider__pagination',
          type: 'bullets',
          clickable: true,
+      },
+      breakpoints: {
+         1024: {
+            slidesPerView: 6
+         },
+         768: {
+            slidesPerView: 5
+         },
+         550: {
+            slidesPerView: 4
+         },
+         400: {
+            slidesPerView: 3
+         }
       },
    });
    const swiper = new Swiper('.main-slider__swiper-thumbs', {
@@ -115,6 +120,7 @@ if (document.querySelector('.main-slider__swiper-thumbs')
       },
    });
 }
+
 if (document.querySelector('.product-swiper__thumbs')
    && document.querySelector('.product-swiper__main')) {
    const target2 = document.querySelector('.product-swiper__main');
@@ -143,14 +149,13 @@ if (document.querySelector('.product-swiper__thumbs')
    });
 }
 
-
 function addSwiperSection(selector) {
    if (document.querySelector(selector)) {
       const target = document.querySelector(selector);
       const swiper = new Swiper(target.querySelector('.swiper'), {
          spaceBetween: 8,
          speed: 300,
-         slidesPerView: 4,
+         slidesPerView: 1.2,
          grabCursor: true,
          navigation: {
             nextEl: target.querySelector('.swiper-next'),
@@ -160,6 +165,14 @@ function addSwiperSection(selector) {
             el: target.querySelector('.swiper-pagination'),
             type: 'bullets',
             clickable: true,
+         },
+         breakpoints: {
+            1024: {
+               slidesPerView: 4
+            },
+            768: {
+               slidesPerView: 3
+            }
          },
       });
    }

@@ -4,8 +4,16 @@
 
    &__grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 8px;
+
+      @media (min-width:768px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width:1024px) {
+         grid-template-columns: repeat(4, 1fr);
+      }
    }
 
    &__card {
@@ -69,6 +77,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(14, 25, 39, 0.4);
+      transition: background-color 0.3s;
    }
 
    &__card-front-header {
@@ -77,8 +86,6 @@
       align-items: center;
    }
 
-   &__card-front-logo {}
-
    &__card-front-text {
       padding: 20px;
       font-weight: 500;
@@ -86,6 +93,7 @@
       line-height: 100%;
       letter-spacing: -0.02em;
       color: #fff;
+      transition: opacity 0.3s;
    }
 
    &__card-front-button {
@@ -93,5 +101,17 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
+      transition: opacity 0.3s;
+   }
+
+   &__visible {
+      background-color: transparent;
+      pointer-events: none;
+
+      .quality__card-front-button,
+      .quality__card-front-text {
+         opacity: 0;
+         pointer-events: none;
+      }
    }
 }
