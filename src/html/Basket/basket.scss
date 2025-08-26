@@ -1,0 +1,202 @@
+.basket {
+
+   &__body {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+
+      @media (min-width:1024px) {
+         flex-direction: row;
+      }
+   }
+
+   &__cards {
+      flex: 1 1 auto;
+   }
+
+   &__card {
+      padding: 8px;
+      display: flex;
+      gap: 24px;
+      border-radius: 32px;
+      background-color: #f5f5f9;
+
+      &:not(:last-child) {
+         margin-bottom: 8px;
+      }
+   }
+
+   &__card-image {
+      --size: 80px;
+      position: relative;
+      border-radius: 20px;
+      height: var(--size);
+      width: var(--size);
+      min-width: var(--size);
+      overflow: hidden;
+
+      @media (min-width:768px) {
+         --size: 112px;
+      }
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__card-content {
+      flex: 1 1 auto;
+   }
+
+   &__card-title {
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: #191919;
+
+      @media (min-width:768px) {
+         font-size: 20px;
+      }
+   }
+
+   &__card-info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 16px;
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
+
+      @media (min-width:1024px) {
+         flex-direction: column;
+      }
+
+      @media (min-width:1200px) {
+         flex-direction: row;
+      }
+   }
+
+   &__card-data {
+      flex: 1 1 auto;
+      width: 100%;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: rgba(25, 25, 25, 0.6);
+
+      @media (min-width:768px) {
+         font-size: 16px;
+      }
+   }
+
+   &__card-data-price {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: inherit;
+
+      @media (min-width:500px) {
+         flex-direction: row;
+      }
+   }
+
+   &__card-sale-percent {
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 114%;
+      letter-spacing: -0.02em;
+      color: #191919;
+      border: 1px solid #191919;
+      border-radius: 16px;
+   }
+
+   &__card-sale-value {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      text-decoration: line-through;
+      color: rgba(25, 25, 25, 0.6);
+   }
+
+   &__card-price {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: #191919;
+   }
+
+   &__card-delete {
+      margin: 8px;
+      padding: 8px;
+      text-align: center;
+   }
+
+   &__form {
+      padding: 40px;
+      flex: 0 0 min(448px, 40%);
+
+      border-radius: 24px;
+      background: #f5f5f9;
+   }
+
+   &__form-title {
+      margin-bottom: 36px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -0.04em;
+      color: #191919;
+   }
+
+   &__policy-privacy {
+      margin-top: 36px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 117%;
+      color: rgba(25, 25, 25, 0.4);
+
+      a {
+         color: #191919;
+      }
+   }
+}
+
+.input-name {
+   display: block;
+   margin-bottom: 8px;
+   font-size: 14px;
+   line-height: 114%;
+   color: #a1a6af;
+}
+
+.input-text {
+   margin-bottom: 16px;
+   padding: 12px 16px;
+   display: block;
+   width: 100%;
+   height: 48px;
+   font-size: 16px;
+   line-height: 112%;
+   letter-spacing: -0.02em;
+   color: #191919;
+   border-radius: 8px;
+   background-color: #ffffff;
+}
+
+.input-submit {
+   margin-top: 36px;
+   width: 100%;
+}

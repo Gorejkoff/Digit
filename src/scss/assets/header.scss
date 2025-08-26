@@ -123,7 +123,6 @@
       z-index: 1;
       top: 0;
       left: 0;
-
       width: 100%;
       background-color: inherit;
       border-radius: inherit;
@@ -134,22 +133,23 @@
    }
 
    &__result-shell {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 8px;
       max-height: 80vh;
       overflow-y: auto;
 
-      &::-webkit-scrollbar {
-         display: none
+      @media (min-width:768px) {
+         flex-direction: row;
       }
 
-      @media (min-width:768px) {
-         grid-template-columns: 1fr 1fr;
+      &::-webkit-scrollbar {
+         display: none
       }
    }
 
    &__result-list {
+      flex: 1 1 auto;
       display: grid;
       grid-template-columns: 1fr;
       gap: 8px;
@@ -168,6 +168,7 @@
       justify-content: space-between;
       border-radius: 24px;
       overflow: hidden;
+      flex: 0 0 280px;
 
       .button-green {
          padding: 16px 20px;

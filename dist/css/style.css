@@ -549,10 +549,13 @@ body {
 }
 
 .header__result-shell {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 8px;
   max-height: 80vh;
   overflow-y: auto;
@@ -563,6 +566,9 @@ body {
 }
 
 .header__result-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -585,6 +591,9 @@ body {
           justify-content: space-between;
   border-radius: 24px;
   overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 280px;
+          flex: 0 0 280px;
 }
 
 .header__baner .button-green {
@@ -2130,10 +2139,216 @@ body {
   left: 0;
 }
 
+.basket__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.basket__cards {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.basket__card {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  border-radius: 32px;
+  background-color: #f5f5f9;
+}
+
+.basket__card:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.basket__card-image {
+  --size: 80px;
+  position: relative;
+  border-radius: 20px;
+  height: var(--size);
+  width: var(--size);
+  min-width: var(--size);
+  overflow: hidden;
+}
+
+.basket__card-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.basket__card-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.basket__card-title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #191919;
+}
+
+.basket__card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.basket__card-data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(25, 25, 25, 0.6);
+}
+
+.basket__card-data-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: inherit;
+}
+
+.basket__card-sale-percent {
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: -0.02em;
+  color: #191919;
+  border: 1px solid #191919;
+  border-radius: 16px;
+}
+
+.basket__card-sale-value {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: line-through;
+  color: rgba(25, 25, 25, 0.6);
+}
+
+.basket__card-price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #191919;
+}
+
+.basket__card-delete {
+  margin: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+.basket__form {
+  padding: 40px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 min(448px, 40%);
+          flex: 0 0 min(448px, 40%);
+  border-radius: 24px;
+  background: #f5f5f9;
+}
+
+.basket__form-title {
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #191919;
+}
+
+.basket__policy-privacy {
+  margin-top: 36px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  color: rgba(25, 25, 25, 0.4);
+}
+
+.basket__policy-privacy a {
+  color: #191919;
+}
+
+.input-name {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 114%;
+  color: #a1a6af;
+}
+
+.input-text {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  display: block;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: -0.02em;
+  color: #191919;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.input-submit {
+  margin-top: 36px;
+  width: 100%;
+}
+
 @media (min-width: 500px) {
   .product-calculate__card-list {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .basket__card-data-price {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -2145,7 +2360,6 @@ body {
   .button-border,
   .button-green {
     min-height: 64px;
-    padding: 25px 20px 23px;
     font-size: 20px;
   }
 
@@ -2161,8 +2375,10 @@ body {
   }
 
   .header__result-shell {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   .header__baner-text {
@@ -2296,6 +2512,25 @@ body {
   .product-calculate__buttons a {
     font-size: 20px;
   }
+
+  .basket__card-image {
+    --size: 112px;
+  }
+
+  .basket__card-title {
+    font-size: 20px;
+  }
+
+  .basket__card-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .basket__card-data {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 998px) {
@@ -2389,6 +2624,20 @@ body {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .basket__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .basket__card-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -2457,6 +2706,13 @@ body {
   .product-calculate__card-list {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .basket__card-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
