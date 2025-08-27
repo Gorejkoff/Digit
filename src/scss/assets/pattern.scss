@@ -253,8 +253,10 @@ body {
 
 .swiper-pagination {
    padding: 28px 24px;
+   flex: 1 1 auto;
    display: flex;
    align-items: center;
+   justify-content: center;
    flex-wrap: wrap;
    gap: 8px;
    background: #f5f5f9;

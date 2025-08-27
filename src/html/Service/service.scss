@@ -1,16 +1,18 @@
 @use '../../scss/assets/variablesSCSS.scss' as *;
 
 .service {
+   &__swiper {
+      overflow: hidden;
+   }
 
    &__container {}
 
-   &__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
+   & &__grid {
 
       @media (min-width:768px) {
+         display: grid;
          grid-template-columns: repeat(2, 1fr);
+         gap: 8px;
       }
 
       @media (min-width:1200px) {

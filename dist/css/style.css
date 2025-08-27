@@ -386,12 +386,18 @@ body {
 
 .swiper-pagination {
   padding: 28px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 8px;
@@ -1405,12 +1411,8 @@ body {
   color: #191919;
 }
 
-.service__grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  gap: 8px;
+.service__swiper {
+  overflow: hidden;
 }
 
 .service__cell {
@@ -1596,12 +1598,8 @@ body {
      object-fit: cover;
 }
 
-.quality__grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  gap: 8px;
+.quality__swiper {
+  overflow: hidden;
 }
 
 .quality__card {
@@ -2454,12 +2452,18 @@ body {
     font-size: 16px;
   }
 
-  .service__grid {
+  .service .service__grid {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 
-  .quality__grid {
+  .quality .quality__grid {
+    display: -ms-grid;
+    display: grid;
+    gap: 8px;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2620,7 +2624,7 @@ body {
     font-size: 20px;
   }
 
-  .quality__grid {
+  .quality .quality__grid {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
   }
@@ -2660,7 +2664,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .service__grid {
+  .service .service__grid {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
   }

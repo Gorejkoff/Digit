@@ -4,8 +4,11 @@
       'text':'Качество и скорость',
       'caption':'За счет современного оборудования'
       })
-      <div class="quality__grid">
-         @@loop('./Quality-Card-2.html','json/quality.json')
+      <div class="quality__swiper swiper">
+         <div class="quality__grid swiper-wrapper">
+            @@loop('./Quality-Card-2.html','json/quality.json')
+         </div>
       </div>
+
    </div>
 </section>
